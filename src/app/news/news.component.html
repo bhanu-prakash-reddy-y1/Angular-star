@@ -1,0 +1,9 @@
+<div class="container  ">
+    <div class="card card-body col-md-4 float-left"> 
+        <div class="card card-body" *ngFor = 'let n of news' (click) = 'sendnews(n)'>
+            <img src="{{n.img}}" alt="">
+            <h3>{{n.name}}</h3>
+        </div>
+    </div>
+<app-news-details [dataFromNews] = 'newsdata'></app-news-details>
+</div>

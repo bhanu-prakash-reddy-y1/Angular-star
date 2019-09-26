@@ -1,0 +1,4 @@
+.card.card-body.col-md-3.float-left{
+    overflow: scroll;
+    height: 700px;
+}

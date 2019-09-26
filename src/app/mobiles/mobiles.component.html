@@ -1,0 +1,9 @@
+<div class=" container">
+    <div class="card card-body col-md-3 float-left"> 
+        <div class="card" *ngFor = 'let mobile of mobiles' (click) = sendmobile(mobile)>
+            <img src="{{mobile.img}}" alt="">
+            <h4>{{mobile.brand}}</h4>
+        </div>
+    </div>
+    <app-mobile-details [datafromMobile] = 'mobiledata'></app-mobile-details>
+</div>

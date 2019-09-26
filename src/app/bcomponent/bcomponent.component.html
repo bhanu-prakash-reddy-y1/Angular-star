@@ -1,0 +1,9 @@
+<form action="" method="POST" #form='ngForm' role="form">
+    <legend>Form title</legend>
+
+    <div class="form-group">
+        <label for="">label</label>
+        <input type="text" class="form-control" name='name' #name='ngModel' [(ngModel)]='url' id="" placeholder="Input field">
+    </div>
+    <button type="submit" (click)='sendForm(url)' class="btn btn-primary">Submit</button>
+</form>

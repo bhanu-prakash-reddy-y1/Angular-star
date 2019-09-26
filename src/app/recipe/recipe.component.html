@@ -1,0 +1,10 @@
+
+<div class="container  mt-5">
+        <div class="card card-body col-md-3 float-left">
+                <div class="conatiner card" *ngFor = 'let r of recipes' (click)  = 'recipedata(r)'>
+                        <img src="{{r.img}}" alt="">
+                        <h3>{{r.recipe}}</h3>
+                </div>
+        </div>
+        <app-recipe-details [recipeDetails]= 'recipeDetail'></app-recipe-details>
+</div>
