@@ -1,0 +1,77 @@
+<div class="col-md-8 offset-md-2">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Date-of-birth</th>
+                <th>Email</th>
+                <th>High-Qualification</th>
+                <th>Delete</th>
+                <th>Update</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let user of register'>
+                <td>{{user.name}}</td>
+                <td>{{user.Dob}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.hq}}</td>
+                <td><button (click)='deleteUser(user)' type="submit" 
+                    class="btn btn-danger float-right">Delete</button>    
+                </td>
+                                    <td>
+                                        <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" (click)='updateData(user)' data-toggle="modal" data-target="#exampleModal">
+                        Update
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                             <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                        </button>
+                                          </div>
+                                            <div class="modal-body">
+                                                <form #forms='ngForm' (ngSubmit)='update(userDetails.id , forms.value)'>
+                                                    <legend align='center'><h1>Update.....!</h1></legend>
+                                                
+                                                    <div class="form-group">
+                                                        <label for="">Full Name</label>
+                                                        <input type="text" class="form-control" id="name" name="name" #name='ngModel' [(ngModel)]=userDetails.name  placeholder="Enter your name" required>
+                                                    </div>
+                                                
+                                                    <div class="form-group">
+                                                        <label for="">Date of Birth</label>
+                                                        <input type="date" name="Dob" id="Dob" #Dob='ngModel' [(ngModel)]=userDetails.Dob class="form-control"  required>
+                                                    </div>
+                                                
+                                                    <div class="form-group">
+                                                        <label for="">Email</label>
+                                                        <input type="email" name="email" id="email" #email='ngModel' [(ngModel)]=userDetails.email class="form-control"  placeholder="Enter your mail" required>
+                                                    </div>
+                                                
+                                                    <div class="form-group">
+                                                        <label for="">Password</label>
+                                                        <input type="password" id="password" name="password" #password='ngModel' [(ngModel)]=userDetails.password class="form-control"  placeholder="Enter your password" required>
+                                                    </div>
+                                                
+                                                    <div class="form-group">
+                                                        <label for="">Highest Qualification</label>
+                                                        <input type="text" id="hq" name="hq"  #hq='ngModel' [(ngModel)]=userDetails.hq class="form-control"  placeholder="Enter your qualification" required>
+                                                    </div>
+                                        
+                                                    <button type="submit"class="btn btn-primary">Submit</button>
+                                            </form>
+                                          </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+</div>

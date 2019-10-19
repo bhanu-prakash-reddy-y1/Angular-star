@@ -1,0 +1,20 @@
+<div class="col-md-8 offset-md-2">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date-of-birth</th>
+                    <th>Email</th>
+                    <th>High-Qualification</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let user of register'>
+                    <td>{{user.name}}</td>
+                    <td>{{user.Dob}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.hq}}</td>   
+                </tr>
+            </tbody>
+        </table>
+    </div>

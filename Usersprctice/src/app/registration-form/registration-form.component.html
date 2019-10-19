@@ -1,0 +1,50 @@
+<div class="col-md-8 offset-md-2">
+    
+<form  #forms='ngForm' (ngSubmit)='register(forms.value)'>
+    
+   <div class="col-md-10 offset-md-1 card card-body mt-3">
+        <legend align='center' class="text-light card bg-info"><h1>ybpr registration....!</h1></legend> 
+    
+
+
+    <div class="form-group">
+        <label class="text-success" for="">Full Name <h5 class="text-danger float-right">*</h5></label>
+        <h5 class="text-danger float-right">* Required fields</h5>
+        <input type="text" class="form-control" name="name" #name='ngModel' ngModel id="name" placeholder="Enter your name"
+         required minlength="8">    
+         <div class="alert alert-danger text-dark" *ngIf = 'name.touched && name.invalid && name.errors.minlength'><h6>* Minumun 8 Charactors </h6></div>
+         <div class="alert alert-danger text-dark"  *ngIf = 'name.touched && name.invalid && name.errors.required'><h6>* Required field </h6></div>
+
+    </div>
+
+    <div class="form-group">
+        <label class="text-success" for="">Date of Birth <h5 class="text-danger float-right">*</h5></label>
+        <input type="date" name="Dob" #Dob='ngModel' ngModel class="form-control" id="Dob" required>
+    </div>
+
+    <div class="form-group">
+        <label class="text-success" for="">Email<h5 class="text-danger float-right">*</h5></label>
+        <input type="email" name="email" #email='ngModel' ngModel class="form-control" id="email" placeholder="Enter your mail" required email>
+         <div class="alert alert-danger text-dark"  *ngIf = 'email.touched && email.invalid && email.errors.email'><h6>* Enter user Email</h6></div>
+
+    </div>
+
+    <div class="form-group">
+        <label class="text-success" for="">Password <h5 class="text-danger float-right">*</h5></label>
+        <input type="password" name="password" #password='ngModel' ngModel class="form-control" id="password"
+         minlength="8" placeholder="Enter your password" required>
+         <div class="alert alert-danger"  *ngIf = 'password.touched && password.invalid && password.errors.minlength'><h6>* Minumun 8 Charactors </h6></div>
+    </div>
+
+    <div class="form-group">
+        <label class="text-success" for="">Highest Qualification<h5 class="text-danger float-right">*</h5></label>
+        <input type="text" name="hq" #hq='ngModel' ngModel class="form-control" id="hq" 
+        placeholder="Enter your qualification" required>
+    </div>
+
+
+    <button type="submit"class="btn btn-primary" [disabled]='forms.invalid'>Submit</button>
+   </div>
+</form>
+
+</div>

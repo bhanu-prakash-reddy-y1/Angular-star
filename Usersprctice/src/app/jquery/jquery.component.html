@@ -1,0 +1,59 @@
+<div  class="col-md-3 mt-3 float-left">
+      <button id="btn1" class="btn btn-primary float-left">submit1</button>
+</div>
+
+<div id="btn2" class="col-md-3 mt-3  float-left">
+        <button class="btn btn-primary float-left">submit2</button>
+  </div>
+  
+  <div id="btn3" class="col-md-3 mt-3 float-left">
+        <button class="btn btn-primary float-left">submit3</button>
+  </div>
+  <div id="btn4" class="col-md-3 mt-3 float-left">
+        <button type="submit" class="btn btn-primary float-left">submit4</button>
+  </div>
+
+
+<div id="panel1" class="jumbotron col-md-3 float-left">
+    <div class="container">
+        <h1>Hello, world!</h1>
+        <p>Contents ...</p>
+        <p>
+            <a class="btn btn-primary btn-lg">Learn more</a>
+        </p>
+    </div>
+</div>
+<div id="panel2" class="jumbotron col-md-3 float-left">
+        <div class="container">
+            <h1>Hello, world!</h1>
+            <p>Contents ...</p>
+            <p>
+                <a class="btn btn-primary btn-lg">Learn more</a>
+            </p>
+        </div>
+    </div>
+    <div id="panel3" class="jumbotron col-md-3 float-left">
+            <div class="container">
+                <h1>Hello, world!</h1>
+                <p>Contents ...</p>
+                <p>
+                    <a class="btn btn-primary btn-lg">Learn more</a>
+                </p>
+            </div>
+        </div>
+        <div id="panel4" class="jumbotron col-md-3 float-left">
+                <div class="container">
+                    <h1>Hello, world!</h1>
+                    <p>Contents ...</p>
+                    <p>
+                        <a class="btn btn-primary btn-lg">Learn more</a>
+                    </p>
+                </div>
+            </div>
+<script>
+$(function(){
+    $('#btn1').on('click',function(){
+        $('#panel1').toggle();
+    });
+});
+</script>
